@@ -27,7 +27,7 @@ text
 
 Prerequisites
 
-    Python 3.10, 3.11, or 3.12
+    Python 3.13 and above
 
     pip
 
@@ -40,7 +40,7 @@ Quick start
 
 bash
 git clone <your-repo-url>
-cd pharma-search-app
+cd DRL_Demo
 
 2) Create and activate a virtual environment
 macOS / Linux
@@ -61,60 +61,10 @@ bash
 pip install --upgrade pip
 pip install -r requirements.txt
 
-4) Configure environment variables
-
-Copy the example file and update it with your real credentials.
-macOS / Linux
+4) Run the app
 
 bash
-cp .env.example .env
-
-Windows PowerShell
-
-powershell
-Copy-Item .env.example .env
-
-Then set the values from .env in your shell, or export them manually.
-macOS / Linux
-
-bash
-export CB_CONN_STR="couchbases://your-cluster"
-export CB_USERNAME="your_username"
-export CB_PASSWORD="your_password"
-export CB_BUCKET="drl_medical"
-export CB_SCOPE="catalog"
-export CB_COLLECTION="drugs"
-export CAPELLA_AI_BASE_URL="https://your-ai-endpoint/v1"
-export EMBEDDING_MODEL="nvidia/llama-3.2-nv-embedqa-1b-v2"
-export EMBEDDING_API_KEY="your_embedding_api_key"
-export CHAT_MODEL="mistralai/mistral-7b-instruct-v0.3"
-export CHAT_API_KEY="your_chat_api_key"
-export TOP_K="5"
-export VECTOR_METRIC="L2"
-export NPROBES="4"
-
-Windows PowerShell
-
-powershell
-$env:CB_CONN_STR="couchbases://your-cluster"
-$env:CB_USERNAME="your_username"
-$env:CB_PASSWORD="your_password"
-$env:CB_BUCKET="drl_medical"
-$env:CB_SCOPE="catalog"
-$env:CB_COLLECTION="drugs"
-$env:CAPELLA_AI_BASE_URL="https://your-ai-endpoint/v1"
-$env:EMBEDDING_MODEL="nvidia/llama-3.2-nv-embedqa-1b-v2"
-$env:EMBEDDING_API_KEY="your_embedding_api_key"
-$env:CHAT_MODEL="mistralai/mistral-7b-instruct-v0.3"
-$env:CHAT_API_KEY="your_chat_api_key"
-$env:TOP_K="5"
-$env:VECTOR_METRIC="L2"
-$env:NPROBES="4"
-
-5) Run the app
-
-bash
-streamlit run app.py
+streamlit run v2_vector_app.py
 
 Or use:
 
